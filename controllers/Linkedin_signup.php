@@ -20,9 +20,9 @@ class Linkedin_signup extends CI_Controller {
 
         // setup before redirecting to Linkedin for authentication.
         $linkedin_config = array(
-            'appKey' => '75utigpbw8467u',
-            'appSecret' => 'mSgNt1LyR2Mxi4lz',
-            'callbackUrl' => 'http://localhost/quickscan/linkedin_signup/data/'
+            'appKey' => 'YOUR API KEY',
+            'appSecret' => 'API SECRET',
+            'callbackUrl' => base_url('linkedin_signup/data/');
         );
 
         $this->load->library('linkedin', $linkedin_config);
@@ -52,10 +52,10 @@ class Linkedin_signup extends CI_Controller {
 
     function data() {
 
-        $linkedin_config = array(
-            'appKey' => '75utigpbw8467u',
-            'appSecret' => 'mSgNt1LyR2Mxi4lz',
-            'callbackUrl' => ''
+         $linkedin_config = array(
+            'appKey' => 'YOUR API KEY',
+            'appSecret' => 'API SECRET',
+            'callbackUrl' => base_url('linkedin_signup/data/');
         );
 
         $this->load->library('linkedin', $linkedin_config);
@@ -96,7 +96,7 @@ class Linkedin_signup extends CI_Controller {
             echo '<br><br>';
 
             echo 'Logout';
-            echo '<form id="linkedin_connect_form" action="../logout" method="post">';
+            echo '<form id="linkedin_connect_form" action="#" method="post">';
             echo '<input type="submit" value="Logout from LinkedIn" />';
             echo '</form>';
 			
